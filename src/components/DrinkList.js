@@ -1,12 +1,24 @@
 import React from "react";
+import Drink from "./Drink";
 import PropTypes from "prop-types";
 
 
 function DrinkList(props) {
   return (
     <React.Fragment>
-      <h3>drink list</h3>
+      {props.drinkList.map((drink, index) => 
+      <Drink 
+      name = {drink.name}
+      brand = {drink.brand}
+      alcoholContent = {drink.alcoholContent}
+      price = {drink.price}
+      drinksLeft = {drink.drinksLeft}
+      key = {index} />
+      )}
     </React.Fragment>
   )
+}
+DrinkList.PropTypes ={
+  drinkList: PropTypes.array
 }
 export default DrinkList;
