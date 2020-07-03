@@ -7,6 +7,7 @@ class DrinkControl extends React.Component {
     super(props);
     this.state = {
       formVisibleOnPage: false,
+      masterDrinkList: []
     }
   }
 
@@ -22,7 +23,7 @@ class DrinkControl extends React.Component {
       currentlyVisibleState = <NewDrinkForm />
     } else {
       currentlyVisibleState = (
-        <DrinkList />
+        <DrinkList drinkList={this.state.masterDrinkList} />
       )
     }
     return (

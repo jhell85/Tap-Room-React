@@ -18,7 +18,7 @@ function DrinkList(props) {
     </React.Fragment>
   )
 }
-DrinkList.PropTypes ={
+DrinkList.propTypes ={
   drinkList: PropTypes.array
 }
 export default DrinkList;

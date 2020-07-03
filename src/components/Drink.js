@@ -13,7 +13,7 @@ function Drink(props){
   );
 }
 
-Drink.PropTypes = {
+Drink.propTypes = {
   name: PropTypes.string.isRequired,
   brand: PropTypes.string.isRequired,
   alcoholContent: PropTypes.number.isRequired,
