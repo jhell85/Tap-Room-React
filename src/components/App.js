@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './Header'
+import DrinkControl from './DrinkControler'
 import './../App.css';
 
 function App() {

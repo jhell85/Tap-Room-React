@@ -1,3 +1,7 @@
+import React from 'react'
+import NewDrinkForm from "./NewDrinkForm"
+import DrinkList from "./DrinkList"
+
 class DrinkControl extends React.Component {
   constructor(props){
     super(props);
@@ -12,7 +16,7 @@ class DrinkControl extends React.Component {
       currentlyVisibleState = <NewDrinkForm />
     } else {
       currentlyVisibleState = (
-        <MerchList />
+        <DrinkList />
       )
     }
     return (
@@ -22,3 +26,4 @@ class DrinkControl extends React.Component {
     )
   }
 }
+export default DrinkControl
