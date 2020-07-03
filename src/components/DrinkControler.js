@@ -10,6 +10,12 @@ class DrinkControl extends React.Component {
     }
   }
 
+  handleClick = () => {
+    this.setState((prevState) => ({
+      formVisibleOnPage: !prevState.formVisibleOnPage,
+    }))
+  };
+
   render(){
     let currentlyVisibleState = null;
     if(this.state.formVisibleOnPage){
@@ -22,6 +28,7 @@ class DrinkControl extends React.Component {
     return (
       <React.Fragment>
         {currentlyVisibleState}
+        <button onClick={this.handleClick}>Add Drink</button>
       </React.Fragment>
     )
   }
