@@ -16,11 +16,18 @@ class DrinkControl extends React.Component {
       formVisibleOnPage: !prevState.formVisibleOnPage,
     }))
   };
+  handleAddingNewDrinkToList = (newDrink) => {
+    const newMasterDrinkList = this.state.masterDrinkList.concat(newDrink);
+    this.setState({
+      masterDrinkList: newMasterDrinkList,
+      formVisibleOnPage: false  
+    });
+  }
 
   render(){
     let currentlyVisibleState = null;
     if(this.state.formVisibleOnPage){
-      currentlyVisibleState = <NewDrinkForm />
+      currentlyVisibleState = <NewDrinkForm onNewDrinkCreation={this.handleAddingNewDrinkToList} />
     } else {
       currentlyVisibleState = (
         <DrinkList drinkList={this.state.masterDrinkList} />
