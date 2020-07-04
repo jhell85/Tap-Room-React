@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 function NewDrinkForm(props) {
   function handleNewDrinkFormSubmission(event){
     event.preventDefault();
-    props.onNewDrinkCreation({name: event.target.name.value, brand: event.target.brand.value, alcoholContent: event.target.alcoholContent.value, price: event.target.price.value, drinksLeft: event.target.drinksLeft.value, id: v4()});
+    props.onNewDrinkCreation({name: event.target.name.value, brand: event.target.brand.value, alcoholContent: event.target.alcoholContent.value, price: event.target.price.value, drinksLeft: 124, id: v4()});
   }
   return(
     <React.Fragment>
@@ -34,12 +34,6 @@ function NewDrinkForm(props) {
           type="number" 
           name="price"
           placeholder="price"
-          required
-        />
-        <input 
-          name="drinksLeft"
-          type="hidden"
-          value="124"
           required
         />
         <button type="submit">Add Drink</button>

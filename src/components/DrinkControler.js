@@ -24,6 +24,22 @@ class DrinkControl extends React.Component {
     });
   }
 
+  handleDrinkPour = (id) => {
+    const selectedDrink = this.state.masterDrinkList.filter((drink) => drink.id === id)[0];
+    if (selectedDrink.drinksLeft === 0) {
+      alert("sorry we're out of this drink")
+    } else {
+      selectedDrink.drinksLeft --;
+    }
+    const upadatedDrinkList = this.state.masterDrinkList.filter(drink => drink.id !== id).concat(selectedDrink)
+    this.setState({
+      masterDrinkList: upadatedDrinkList
+    })
+    console.log(id)
+
+    
+  }
+
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
@@ -31,7 +47,7 @@ class DrinkControl extends React.Component {
       currentlyVisibleState = <NewDrinkForm onNewDrinkCreation={this.handleAddingNewDrinkToList} />
       buttonText = "Return to Drink List"
     } else {
-      currentlyVisibleState = (<DrinkList drinkList={this.state.masterDrinkList} />)
+      currentlyVisibleState = (<DrinkList drinkList={this.state.masterDrinkList} drinkPouredClicked={this.handleDrinkPour} />)
       buttonText = "Add a Drink"
     }
     return (

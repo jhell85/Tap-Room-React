@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function Drink(props){
+
+ 
   return(
     <React.Fragment>
       <h3>{props.name}</h3>
@@ -9,6 +11,7 @@ function Drink(props){
       <p>{props.alcoholContent}</p>
       <p>{props.price}</p>
       <p>{props.drinksLeft}</p>
+      <button onClick= {() => props.drinkPouredClicked(props.id)}>take a drink</button>
     </React.Fragment>
   );
 }
@@ -18,6 +21,8 @@ Drink.propTypes = {
   brand: PropTypes.string.isRequired,
   alcoholContent: PropTypes.number.isRequired,
   price: PropTypes.number.isRequired,
-  drinksLeft: PropTypes.number.isRequired
+  drinksLeft: PropTypes.number.isRequired,
+  id: PropTypes.string,
+  drinkPouredClicked: PropTypes.func
 };
 export default Drink;

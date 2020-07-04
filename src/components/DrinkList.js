@@ -6,19 +6,22 @@ import PropTypes from "prop-types";
 function DrinkList(props) {
   return (
     <React.Fragment>
-      {props.drinkList.map((drink, index) => 
+      {props.drinkList.map((drink) => 
       <Drink 
+      drinkPouredClicked = {props.drinkPouredClicked}
       name = {drink.name}
       brand = {drink.brand}
       alcoholContent = {drink.alcoholContent}
       price = {drink.price}
       drinksLeft = {drink.drinksLeft}
-      key = {index} />
+      id = {drink.id} />
       )}
     </React.Fragment>
   )
 }
 DrinkList.propTypes ={
-  drinkList: PropTypes.array
+  drinkList: PropTypes.array,
+  drinkPouredClicked: PropTypes.func
+
 }
 export default DrinkList;
