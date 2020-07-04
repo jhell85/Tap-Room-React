@@ -26,17 +26,18 @@ class DrinkControl extends React.Component {
 
   render(){
     let currentlyVisibleState = null;
+    let buttonText = null;
     if(this.state.formVisibleOnPage){
       currentlyVisibleState = <NewDrinkForm onNewDrinkCreation={this.handleAddingNewDrinkToList} />
+      buttonText = "Return to Drink List"
     } else {
-      currentlyVisibleState = (
-        <DrinkList drinkList={this.state.masterDrinkList} />
-      )
+      currentlyVisibleState = (<DrinkList drinkList={this.state.masterDrinkList} />)
+      buttonText = "Add a Drink"
     }
     return (
       <React.Fragment>
         {currentlyVisibleState}
-        <button onClick={this.handleClick}>Add Drink</button>
+    <button onClick={this.handleClick}>{buttonText}</button>
       </React.Fragment>
     )
   }
