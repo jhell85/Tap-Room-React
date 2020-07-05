@@ -6,7 +6,15 @@ import PropTypes from "prop-types";
 function NewDrinkForm(props) {
   function handleNewDrinkFormSubmission(event){
     event.preventDefault();
-    props.onNewDrinkCreation({name: event.target.name.value, brand: event.target.brand.value, alcoholContent: event.target.alcoholContent.value, price: event.target.price.value, drinksLeft: 124, id: v4()});
+    props.onNewDrinkCreation({
+            name: event.target.name.value,
+            brand: event.target.brand.value, 
+            alcoholContent: event.target.alcoholContent.value,
+            price: event.target.price.value,
+            drinksLeft: 124,
+            timeStamp: new Date(),
+            id: v4()
+          });
   }
   return(
     <React.Fragment>

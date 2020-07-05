@@ -4,9 +4,10 @@ import PropTypes from "prop-types";
 
 
 function DrinkList(props) {
+  const sortedList = props.drinkList.sort((a,b)=>a.timeStamp.getTime()-b.timeStamp.getTime());
   return (
     <React.Fragment>
-      {props.drinkList.map((drink) => 
+      {sortedList.map((drink) => 
       <Drink 
       drinkPouredClicked = {props.drinkPouredClicked}
       name = {drink.name}

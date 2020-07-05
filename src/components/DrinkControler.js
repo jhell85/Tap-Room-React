@@ -10,7 +10,7 @@ class DrinkControl extends React.Component {
       masterDrinkList: []
     }
   }
-
+  
   handleClick = () => {
     this.setState((prevState) => ({
       formVisibleOnPage: !prevState.formVisibleOnPage,
