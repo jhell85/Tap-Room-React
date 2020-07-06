@@ -19,31 +19,39 @@ function NewDrinkForm(props) {
   return(
     <React.Fragment>
       <h3>Add a Drink to the Tap List</h3>
-      <form onSubmit={handleNewDrinkFormSubmission}>
+      <form onSubmit={handleNewDrinkFormSubmission} class="text-center">
         <input 
           type="text" 
           name="name"
           placeholder="Drink Name"
           required
         />
+       <br/>
+       <br/>
         <input 
           type="text" 
           name="brand"
           placeholder="Brewer's Name"
           required
         />
+        <br/>
+        <br/>
         <input 
           type="number" 
           name="alcoholContent"
           placeholder="alcohol Content"
           required
         />
+        <br/>
+        <br/>
         <input 
           type="number" 
           name="price"
           placeholder="price"
           required
         />
+        <br/>
+        <br/>
         <button type="submit">Add Drink</button>
       </form>
     </React.Fragment>
