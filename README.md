@@ -7,7 +7,6 @@
 
 _This application serves as an introduction to React with create-react-app, components, JSX, and props while building a  site with partial CRUD. This merch site displays a list of available merch and a header for the site._
 
-<!-- ![Wireframe](src/img/Merchstore.jpg) -->
 
 ### Instructions for use:
 
@@ -37,9 +36,6 @@ npm run start
 
 Does not have full CRUD 
 
-### Support and Contact Information
-
-Please contact jozypants@gmail.com with questions. 
 
 ### Technologies Used
 
@@ -49,15 +45,17 @@ Please contact jozypants@gmail.com with questions.
 * HTML
 * Git and GitHub
 
+### Component Diagram
+
+![Wireframe](src/img/Components.drawio)
+
 ### Specs
 | Spec | Input | Output |
 | :------------- | :------------- | :------------- |
 | **User can view a static header** | User Input:"localhost:3000" | Output: “Header is displayed" |
-| **User can view a a dynamic list of available merch** | User Input:"localhost:3000" | Output: “Merch is displayed" |
-| **User can add an item to the merch store** | User Input:"localhost:3000" | Output: “Item added" |
-| **User can add update the quantity of an item or other properties of an item** | User Input:"localhost:3000" | Output: “Item updated"|
-| **User can buy an item from the the merch store** | User Input:"localhost:3000" | Output: “Item quantity decreased" |
-| **User can delete an item to the merch store** | User Input:"localhost:3000" | Output: “Item deleted" |
+| **User can view a a dynamic list of available drinks** | User Input:"localhost:3000" | Output: “Drink is displayed" |
+| **User can add a drink to the Tap Room** | User Input:"localhost:3000" | Output: “Drink added" |
+| **User can take a drink from a drink in the tap list and see the available drinks left has been decreased** | User Input: clicks button "take a drink" | Output: "drinks available has been decreased by 1"|
 
 #### License
 
