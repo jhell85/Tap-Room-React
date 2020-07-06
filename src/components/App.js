@@ -1,14 +1,17 @@
 import React from 'react';
-import Header from './Header'
-import DrinkControl from './DrinkControler'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './Header';
+import DrinkControl from './DrinkControler';
 import './../App.css';
 
 function App() {
   return (
-    <React.Fragment>
-      <Header/>
-      <DrinkControl/>
-    </React.Fragment>
+    <div class="container pt-3">
+      <React.Fragment>
+        <Header/>
+        <DrinkControl/>
+      </React.Fragment>
+    </div>
   );
 }
 
