@@ -38,6 +38,7 @@ function NewDrinkForm(props) {
         <br/>
         <input 
           type="number" 
+          min="0"
           name="alcoholContent"
           placeholder="alcohol Content"
           required
@@ -46,13 +47,14 @@ function NewDrinkForm(props) {
         <br/>
         <input 
           type="number" 
+          min="0"
           name="price"
           placeholder="price"
           required
         />
         <br/>
         <br/>
-        <button type="submit">Add Drink</button>
+        <button class="btn btn-primary" type="submit">Add Drink</button>
       </form>
     </React.Fragment>
   );

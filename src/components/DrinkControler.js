@@ -52,8 +52,8 @@ class DrinkControl extends React.Component {
     }
     return (
       <React.Fragment>
+        <button class= "btn btn-success button-style" onClick={this.handleClick}>{buttonText}</button>
         {currentlyVisibleState}
-    <button onClick={this.handleClick}>{buttonText}</button>
       </React.Fragment>
     )
   }
