@@ -11,7 +11,7 @@ function Drink(props){
       <p>{props.alcoholContent}</p>
       <p>{props.price}</p>
       <p>{props.drinksLeft}</p>
-      <button onClick= {() => props.drinkPouredClicked(props.id)}>take a drink</button>
+      <button class="btn btn-warning" onClick= {() => props.drinkPouredClicked(props.id)}>take a drink</button>
     </React.Fragment>
   );
 }
